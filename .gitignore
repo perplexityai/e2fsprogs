@@ -1,0 +1,4 @@
+bazel-*
+build/
+__pycache__/
+/modules/e2fsprogs/*/overlay/test_module/MODULE.bazel.lock

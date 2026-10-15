@@ -1,0 +1,25 @@
+{
+    "integrity": "sha256-/VvziMvb4Aaj07MY2YOylIOCRArMhah/Hn0QhlPo2ws=",
+    "strip_prefix": "e2fsprogs-1.47.4",
+    "url": "https://mirrors.edge.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v1.47.4/e2fsprogs-1.47.4.tar.xz",
+    "overlay": {
+        "BUILD.bazel": "sha256-2soawmWnVHmx1MmQexTHFVSY3XRMzzRlmni5+R0vdaE=",
+        "MODULE.bazel": "sha256-8xDKw2lAkzla2KoHRSSjKA+xz2z1L1XiHqtNYAvUQxU=",
+        "lib/blkid/blkid.h": "sha256-nIfr3YwAcJRr9G97PVjC3TVHigpQsP9gvkjXa9CpsfU=",
+        "lib/blkid/blkid_types.h": "sha256-nPbqtg6SxSPH834MWQZEQOftSR7GHcU+fzW/wQu+jzo=",
+        "lib/config.h": "sha256-HXKhDF9LOZgVUdif/IzB089y7YTEbnHmEkA0rvQ6tIY=",
+        "lib/dirpaths.h": "sha256-ptKfn6bLCUklVWHWCX5xKm8pNID14RfspBzzYU7AzEY=",
+        "lib/ext2fs/ext2_err.c": "sha256-zjQb9Lnm7XUlap5aiO/0Txm/s3BrJXddPEGP3sYT4TY=",
+        "lib/ext2fs/ext2_err.h": "sha256-IC51/yXLsjG7sp/+8jBC/qKDPMf9wOR9YPgdvEiwti4=",
+        "lib/ext2fs/ext2_types.h": "sha256-01qoLy8GoyGtFNg/ZQGtZNo0pLUe1FHRS/qt3uzBe3Q=",
+        "lib/support/prof_err.c": "sha256-2gQX6H/e9xDLXWfL4TxnYYCx80j/u8mDVHE0AxqsiB0=",
+        "lib/support/prof_err.h": "sha256-/ma5Y1aC7f2QeeS+SKSzfG24HL8nx2eABaUuEKJ30NY=",
+        "lib/uuid/uuid.h": "sha256-LIWXzoPK/WuUNAEHACG+dP/udqC4PMZSyVcZoG3PY88=",
+        "lib/uuid/uuid_types.h": "sha256-Vnrk42VKJHhcSfwAiVxO5n9nWWiWoCNfJhhLsOO/4pI=",
+        "misc/default_profile.c": "sha256-uFJYM9sbAQtblN07umtN1aELPZ+o3pi8bZWmnwIfgls=",
+        "test_module/BUILD.bazel": "sha256-SE4hwra3VlQRx0/NxAHEb7hdmv8LfWYNbXRigv9tmhA=",
+        "test_module/MODULE.bazel": "sha256-IqIzRFdQR4IHPi90pE7HmRk1RN/gFKlvLXtg9qAcIek=",
+        "test_module/platforms.bzl": "sha256-DVVxELKTq6aHqvT5eEosmeyN9G1aL1ROj02V9Jvq8wI=",
+        "test_module/tests/filesystem_test.sh": "sha256-u8JOJkAJ/jTZRACcl4LybMjPjJ7LUoaMBj5yFWNu3IM="
+    }
+}

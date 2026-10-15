@@ -1,0 +1,8 @@
+module(name = "e2fsprogs_overlay")
+
+bazel_dep(name = "e2fsprogs", version = "1.47.4")
+bazel_dep(name = "llvm", version = "0.8.21")
+bazel_dep(name = "with_cfg.bzl", version = "0.14.6")
+bazel_dep(name = "rules_shell", version = "0.8.0")
+
+register_toolchains("@llvm//toolchain:all")

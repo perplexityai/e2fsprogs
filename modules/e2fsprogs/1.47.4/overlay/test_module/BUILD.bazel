@@ -1,0 +1,47 @@
+load("@rules_shell//shell:sh_test.bzl", "sh_test")
+load(":platforms.bzl", "linux_amd64_files", "linux_arm64_files")
+
+TOOLS = ["@e2fsprogs//:" + tool for tool in [
+    "e2fsck",
+    "resize2fs",
+    "dumpe2fs",
+    "tune2fs",
+]]
+
+filegroup(
+    name = "tools",
+    srcs = TOOLS,
+)
+
+linux_amd64_files(
+    name = "linux_amd64",
+    srcs = TOOLS,
+)
+
+linux_arm64_files(
+    name = "linux_arm64",
+    srcs = TOOLS,
+)
+
+# Registry overlays do not retain executable mode bits.
+genrule(
+    name = "filesystem_test_script",
+    srcs = ["tests/filesystem_test.sh"],
+    outs = ["filesystem_test_main.sh"],
+    cmd = "cp $< $@ && chmod +x $@",
+    executable = True,
+)
+
+sh_test(
+    name = "filesystem_test",
+    size = "small",
+    srcs = [":filesystem_test_script"],
+    args = ["$(rootpath @e2fsprogs//:" + tool + ")" for tool in [
+        "mke2fs_test_fixture",
+        "e2fsck",
+        "resize2fs",
+        "dumpe2fs",
+        "tune2fs",
+    ]],
+    data = TOOLS + ["@e2fsprogs//:mke2fs_test_fixture"],
+)

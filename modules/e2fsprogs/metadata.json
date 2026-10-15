@@ -1,0 +1,7 @@
+{
+    "homepage": "https://e2fsprogs.sourceforge.net/",
+    "maintainers": [],
+    "repository": ["github:tytso/e2fsprogs"],
+    "versions": ["1.47.4"],
+    "yanked_versions": {}
+}
